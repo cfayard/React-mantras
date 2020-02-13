@@ -1,23 +1,32 @@
 import React from 'react'
 
-class Input extends React.Component {
+export default class Input extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            
+            text: ''
         }
     }
 
     render() {
         return (
-            
-                <textarea>
-
-                </textarea>
+            <div>
+                <form>
+                    <input 
+                        onChange={this._handleChange}
+                        value={this.state.text} />
+                </form>
+            </div>
             
         )
     }
+    
+    _handleChange = (event) => {
+        this.setState({
+            text: event.target.value
+        })
+    }
+    
 }
 
-export default Input
