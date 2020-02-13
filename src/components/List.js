@@ -12,7 +12,9 @@ class List extends React.Component {
     render() {
         return (
             <ul>
-                
+               <li>mantra1</li> 
+               <li>mantra2</li> 
+               <li>mantra3</li> 
             </ul>
         )
     }

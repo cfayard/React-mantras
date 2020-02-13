@@ -11,11 +11,11 @@ class Input extends React.Component {
 
     render() {
         return (
-            <input>
+            
                 <textarea>
-                    
+
                 </textarea>
-            </input>
+            
         )
     }
 }
