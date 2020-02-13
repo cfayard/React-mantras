@@ -1,21 +1,23 @@
+// we need connect function from react-redux
 import {
     connect
 } from 'react-redux';
-
+// we need our dumb omponent
 import List from '../components/List';
-import { actionAddMantra} from '../actions';
 
+
+// we need? mapStateToProps
 function mapStateToProps(state) {
     console.table(state);
     return {
-        mantra: mantra
+        mantra: state
     }
 }
 
-function mapDispatchToProps(dispatch) {
-    return {
-        ADD_MANTRA: () => {
-            dispatch(actionAddMantra())
-        }
-    }
-}
+// we need? mapDispatchToProps
+// nope. this component does not change redux state
+
+// "wire" everything together
+// and export it!!!!
+const reduxConnector = connect(mapStateToProps);
+export default reduxConnector(List);
