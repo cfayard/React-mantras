@@ -8,9 +8,8 @@ import List from '../components/List';
 
 // we need? mapStateToProps
 function mapStateToProps(state) {
-    console.table(state);
     return {
-        mantra: state
+        mantras: state
     }
 }
 

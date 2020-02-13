@@ -1,25 +1,26 @@
 
 import React from 'react';
-import List from './components/List'
-import Input from './components/Input'
+import './App.css'
+
+import { createStore } from 'redux';
+import {mantras} from './reducers'
+
+import MantraForm from './containers/MantraFormContainer';
+import MantraList from './containers/MantraListContainer'
+
+import { Provider } from 'react-redux'
+const store = createStore(mantras);
 
 function App() {
     return (     
       <div className="App">
-          <List />
-          <Input />
+        <Provider store={store}>
+          <MantraForm />
+          <MantraList />
+        </Provider>
       </div>
   )
 }
-class MantraApp extends React.Component {
-    render() {
-        return (     
-            <div>
-                <List />
-                <Input />
-            </div>)
 
-    }
-}
 
 export default App;

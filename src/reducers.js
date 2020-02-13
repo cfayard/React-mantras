@@ -2,10 +2,9 @@ import {
     ADD_MANTRA
 } from "./actions";
 
-const mantra = " "
 
-export function mantra(state=[], action) {
-    let newState = [ ...state ];
+export function mantras(state=['a', 'b', 'c'], action) {
+    const newState = [ ...state ];
     switch(action.type) {
         case ADD_MANTRA:
         //    any kind of javascript can go here
