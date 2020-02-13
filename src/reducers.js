@@ -8,10 +8,10 @@ export function mantra(state=[], action) {
     let newState = [ ...state ];
     switch(action.type) {
         case ADD_MANTRA:
-            newState = state
-            break;
+        //    any kind of javascript can go here
+            newState.push(action.payload.mantra)
+                break;
             default:
-                state
                 break;
     }
     return newState
