@@ -4,8 +4,8 @@ import {
 
 const mantra = " "
 
-export function count(state=mantra, action) {
-    let newState = state;
+export function mantra(state=[], action) {
+    let newState = [ ...state ];
     switch(action.type) {
         case ADD_MANTRA:
             newState = state
